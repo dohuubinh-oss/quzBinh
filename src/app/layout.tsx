@@ -1,16 +1,27 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Lexend, Noto_Sans } from "next/font/google";
 import "./globals.css";
+import Navbar from "./components/Navbar";
+import Hero from "./components/Hero";
+import Stats from "./components/Stats";
+import WhyChooseUs from "./components/WhyChooseUs";
+import ZigZagFeatures from "./components/ZigZagFeatures";
+import Testimonials from "./components/Testimonials";
+import CTA from "./components/CTA";
+import Footer from "./components/Footer";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const lexend = Lexend({
   subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700", "900"],
+  variable: "--font-lexend",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const notoSans = Noto_Sans({
   subsets: ["latin"],
+  weight: ["400", "500", "700"],
+  variable: "--font-noto-sans",
 });
+
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -25,9 +36,20 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${lexend.variable} ${notoSans.variable} font-body antialiased`}
       >
-        {children}
+        <div className="min-h-screen bg-background text-[#111418] transition-colors duration-300">
+          <Navbar />
+          <main>
+            <Hero />
+            <Stats />
+            <WhyChooseUs />
+            <ZigZagFeatures />
+            <Testimonials />
+            <CTA />
+          </main>
+          <Footer />
+        </div>
       </body>
     </html>
   );
