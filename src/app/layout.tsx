@@ -2,12 +2,6 @@ import type { Metadata } from "next";
 import { Lexend, Noto_Sans } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
-import Stats from "./components/Stats";
-import WhyChooseUs from "./components/WhyChooseUs";
-import ZigZagFeatures from "./components/ZigZagFeatures";
-import Testimonials from "./components/Testimonials";
-import CTA from "./components/CTA";
 import Footer from "./components/Footer";
 
 const lexend = Lexend({
@@ -38,16 +32,11 @@ export default function RootLayout({
       <body
         className={`${lexend.variable} ${notoSans.variable} font-body antialiased`}
       >
-        <div className="min-h-screen bg-background text-[#111418] transition-colors duration-300">
+        <div className="min-h-screen bg-background text-[#111418] transition-colors duration-300 flex flex-col">
           <Navbar />
-          <main>
-            <Hero />
-            <Stats />
-            <WhyChooseUs />
-            <ZigZagFeatures />
-            <Testimonials />
-            <CTA />
-          </main>
+          
+            {children}
+          
           <Footer />
         </div>
       </body>

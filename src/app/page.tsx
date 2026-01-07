@@ -1,11 +1,19 @@
-import Image from "next/image";
+import Hero from "./components/Hero";
+import Stats from "./components/Stats";
+import WhyChooseUs from "./components/WhyChooseUs";
+import ZigZagFeatures from "./components/ZigZagFeatures";
+import Testimonials from "./components/Testimonials";
+import CTA from "./components/CTA";
 
 export default function Home() {
   return (
-    <div className="text-2xl text-red-500">
-      hello
-      
-      
-    </div>
+    <main>
+      <Hero />
+      <Stats />
+      <WhyChooseUs />
+      <ZigZagFeatures />
+      <Testimonials />
+      <CTA />
+    </main>
   );
 }
