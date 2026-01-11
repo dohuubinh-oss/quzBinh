@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+import SectionHeader from './UI/SectionHeader';
 
 const Testimonials: React.FC = () => {
   const reviews = [
@@ -26,14 +27,10 @@ const Testimonials: React.FC = () => {
   return (
     <section className="py-16 md:py-24 bg-gray-50">
       <div className="max-w-[1280px] mx-auto px-4">
-        <div className="text-center max-w-[720px] mx-auto mb-16">
-          <h2 className="text-[#111418] text-3xl md:text-4xl font-bold leading-tight mb-4">
-            Học viên nói gì về chúng tôi?
-          </h2>
-          <p className="text-[#4b5563] text-lg font-body">
-            Lắng nghe chia sẻ thật từ những người đã và đang đồng hành cùng EnglishMaster trên con đường chinh phục tiếng Anh.
-          </p>
-        </div>
+        <SectionHeader 
+          title="Học viên nói gì về chúng tôi?"
+          description="Lắng nghe chia sẻ thật từ những người đã và đang đồng hành cùng EnglishMaster trên con đường chinh phục tiếng Anh."
+        />
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {reviews.map((review, idx) => (
             <div key={idx} className="bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col">

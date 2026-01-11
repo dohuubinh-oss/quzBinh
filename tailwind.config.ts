@@ -15,7 +15,7 @@ const config: Config = {
       },
       fontFamily: {
         display: ['var(--font-lexend)'],
-        body: ['var(--font-noto-sans)'],
+        body: ['var(--font-lexend)'],
       },
       borderRadius: {
         DEFAULT: "0.25rem",

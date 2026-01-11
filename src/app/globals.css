@@ -6,3 +6,21 @@ body {
 .font-body {
   font-family: 'Noto Sans', sans-serif;
 }
+
+.material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #dbe0e6;
+    border-radius: 10px;
+}

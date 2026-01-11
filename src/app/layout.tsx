@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
 import { Lexend, Noto_Sans } from "next/font/google";
 import "./globals.css";
-import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
+import { NextAuthProvider } from "./providers";
 
 const lexend = Lexend({
   subsets: ["latin"],
@@ -32,13 +31,9 @@ export default function RootLayout({
       <body
         className={`${lexend.variable} ${notoSans.variable} font-body antialiased`}
       >
-        <div className="min-h-screen bg-background text-[#111418] transition-colors duration-300 flex flex-col">
-          <Navbar />
-          
-            {children}
-          
-          <Footer />
-        </div>
+        <NextAuthProvider>
+          {children}
+        </NextAuthProvider>
       </body>
     </html>
   );

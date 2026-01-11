@@ -1,3 +1,4 @@
+
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -55,9 +56,9 @@ const Footer: React.FC = () => {
             </p>
             <div className="flex gap-4 mt-6">
               {socialLinks.map((social) => (
-                <a key={social.name} href={social.href} target="_blank" rel="noopener noreferrer" className="text-[#9ca3af] hover:text-[#2b8cee] transition-colors">
+                <Link key={social.name} href={social.href} className="text-[#9ca3af] hover:text-[#2b8cee] transition-colors">
                   {social.icon}
-                </a>
+                </Link>
               ))}
             </div>
           </div>

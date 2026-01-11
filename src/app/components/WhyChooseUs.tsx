@@ -1,4 +1,5 @@
 import React from 'react';
+import SectionHeader from './UI/SectionHeader';
 
 const WhyChooseUs: React.FC = () => {
   const features = [
@@ -31,14 +32,10 @@ const WhyChooseUs: React.FC = () => {
   return (
     <section className="py-16 md:py-24 bg-gray-50">
       <div className="max-w-[1280px] mx-auto px-4">
-        <div className="text-center max-w-[720px] mx-auto mb-16">
-          <h2 className="text-[#111418] text-3xl md:text-4xl font-bold leading-tight mb-4">
-            Tại sao chọn EnglishMaster?
-          </h2>
-          <p className="text-[#4b5563] text-lg font-body">
-            Phương pháp học tập hiện đại kết hợp công nghệ AI giúp tối ưu hóa thời gian và nâng cao hiệu quả ôn luyện.
-          </p>
-        </div>
+        <SectionHeader 
+          title="Tại sao chọn EnglishMaster?"
+          description="Phương pháp học tập hiện đại kết hợp công nghệ AI giúp tối ưu hóa thời gian và nâng cao hiệu quả ôn luyện."
+        />
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {features.map((feature, idx) => (
             <div key={idx} className="bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 border border-transparent hover:border-[#2b8cee]/20 group hover:-translate-y-2">
